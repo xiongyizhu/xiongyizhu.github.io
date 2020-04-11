@@ -1,0 +1,29 @@
+sudo: false
+language: node_js
+node_js:
+  - stable # use nodejs v10 LTS
+cache: npm
+  npm: false
+branches:
+  only:
+    - hexo # build master branch only  # 源代码分支hexo
+    
+install:
+  - npm install
+
+before_install:
+  - export TZ='Asia/Shanghai' # 更改时区
+script:
+  - hexo clean
+  - hexo generate # generate static files
+
+deploy:
+  provider: pages
+  skip_cleanup: true
+  github_token: $GH_TOKEN
+  keep_history: true
+  target_branch: master # 因为默认推送到gh-pages，而我们这里要改推送到master
+  fqdn: xyzdy.cn
+  on:
+    branch: hexo  # 源代码分支hexo
+  local_dir: public
