@@ -10,6 +10,9 @@ branches:
 
 before_install:
   - export TZ='Asia/Shanghai' # 更改时区
+
+  - openssl aes-256-cbc -K $encrypted_9b2d7e19d83c_key -iv $encrypted_9b2d7e19d83c_iv  # 远程登录服务器
+  - in id_rsa.enc -out ~/.ssh/id_rsa -d
 script:
   - hexo clean
   - hexo generate # generate static files
@@ -24,3 +27,6 @@ deploy:
   on:
     branch: hexo  # 源代码分支hexo
   local_dir: public
+
+after_success:
+  - ssh root@39.99.202.209 -o StrictHostKeyChecking=no 'cd /www/wwwroot && git clone -b hexo https://github.com/xiongyizhu/xiongyizhu.github.io.git'

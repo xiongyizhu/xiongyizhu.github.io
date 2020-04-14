@@ -190,7 +190,7 @@ widgets:
     # Profile widget configurations
     -
         # Where should the widget be placed, left sidebar or right sidebar
-        position: left
+        position: right
         type: profile
         # Author name
         author: William Xiong
@@ -211,22 +211,19 @@ widgets:
             Github:
                 icon: fab fa-github
                 url: 'https://github.com/xiongyizhu'
-            微博:
-                icon: fab fa-weibo
-                url: 'https://weibo.com'
             QQ:
                 icon: fab fa-qq
                 url: 'http://wpa.qq.com/msgrd?v=3&uin=1361786108&site=qq&menu=yes'
             微信:
                 icon: fab fa-weixin
-                url: /
+                url: ''
             RSS:
                 icon: fas fa-rss
-                url: /
+                url: ''
     # Table of contents widget configurations
     -
         # Where should the widget be placed, left sidebar or right sidebar
-        position: left
+        position: right
         type: toc
 #   # Recommendation links widget configurations
 #    -
@@ -240,7 +237,7 @@ widgets:
     # Categories widget configurations
     -
         # Where should the widget be placed, left sidebar or right sidebar
-        position: left
+        position: right
         type: categories
 #    # Recent posts widget configurations
 #    -
@@ -250,26 +247,26 @@ widgets:
     # Archives widget configurations
     -
          # Where should the widget be placed, left sidebar or right sidebar
-         position: left
+         position: right
          type: archives
     # Tags widget configurations
     -
         # Where should the widget be placed, left sidebar or right sidebar
-        position: left
+        position: right
         type: tags
     # Google FeedBurner email subscription widget configurations
-    -
-        # Where should the widget be placed, left sidebar or right sidebar
-        position: left
-        type: subscribe_email
-        # Hint text under the email input
-        description: 
-        # Feedburner ID
-        feedburner_id: ''
+#    -
+#        # Where should the widget be placed, left sidebar or right sidebar
+#        position: right
+#        type: subscribe_email
+#        # Hint text under the email input
+#        description: 
+#        # Feedburner ID
+#        feedburner_id: ''
 #    # Google AdSense unit configurations
 #    -
 #        # Where should the widget be placed, left sidebar or right sidebar
-#        position: left
+#        position: right
 #        type: adsense
 #        # AdSense client ID
 #        client_id: ''
