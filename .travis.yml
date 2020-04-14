@@ -31,4 +31,4 @@ deploy:
 
 after_success:
   - chmod 600 ~/.ssh/id_rsa
-  - ssh root@$HOST -o StrictHostKeyChecking=no 'cd /www/wwwroot &&  git pull -b master https://github.com/xiongyizhu/xiongyizhu.github.io.git'
+  - ssh root@$HOST -o StrictHostKeyChecking=no 'cd /www/wwwroot/public &&  git pull origin master'
