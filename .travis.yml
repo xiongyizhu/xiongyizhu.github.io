@@ -30,5 +30,5 @@ deploy:
   local_dir: public
 
 after_success:
-  - chmod 777 ~/.ssh/id_rsa
+  - chmod 600 ~/.ssh/id_rsa
   - ssh travis@$HOST -o StrictHostKeyChecking=no 'cd /www/wwwroot/public &&  git pull origin master'
