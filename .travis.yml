@@ -29,4 +29,4 @@ deploy:
   local_dir: public
 
 after_success:
-  - ssh root@39.99.202.209 -o StrictHostKeyChecking=no 'cd /www/wwwroot && git clone -b hexo https://github.com/xiongyizhu/xiongyizhu.github.io.git'
+  - ssh root@39.99.202.209 -o StrictHostKeyChecking=no 'cd /www/wwwroot &&  git pull -b master https://github.com/xiongyizhu/xiongyizhu.github.io.git'
