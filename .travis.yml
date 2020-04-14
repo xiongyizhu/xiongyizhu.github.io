@@ -16,7 +16,6 @@ before_install:
   - openssl aes-256-cbc -K $encrypted_04674a2f3de9_key -iv $encrypted_04674a2f3de9_iv -in id_rsa.enc -out ~/.ssh/id_rsa -d
 
 script:
-  - hexo clean
   - hexo generate # generate static files
 
 deploy:
@@ -31,4 +30,5 @@ deploy:
   local_dir: public
 
 after_success:
-  - ssh root@39.99.202.209 -o StrictHostKeyChecking=no 'cd /www/wwwroot &&  git pull -b master https://github.com/xiongyizhu/xiongyizhu.github.io.git'
+  - chmod 600 ~/.ssh/id_rsa
+  - ssh root@$HOST -o StrictHostKeyChecking=no 'cd /www/wwwroot &&  git pull -b master https://github.com/xiongyizhu/xiongyizhu.github.io.git'
