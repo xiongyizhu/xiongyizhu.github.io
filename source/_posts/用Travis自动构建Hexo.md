@@ -3,9 +3,8 @@ author: 熊义铸
 date: 2020-04-11 23:45:57
 tags:
 ---
-# 理论知识
 
-## Travis CI是什么
+## Travis CI是什么？
 [Travis CI](https://www.travis-ci.org/) 是在线托管的持续集成服务，绑定Github项目，抓取新的代码自动进行测试构建，甚至自动部署到测试环境。 使用这项服务，每次我们提交新的代码，都能及时发现问题并修复。
  
 
@@ -18,7 +17,7 @@ tags:
 2.Travis检测到我们push了文章
 3.Travis将我们的代码clone至它的服务器环境，执行打包部署
 
-# 开始操作
+## 开始操作
 - 在github中创建你的项目（可以是username.github.io,不是也没关系）
 - 在github的[Developer settings](https://github.com/settings/tokens)配置让Travis有权限访问仓库的Token，生成token后暂时不要关闭
 - 进入[Travis CI](https://www.travis-ci.org/)官网使用github账号登录，添加刚刚新建的仓库
@@ -77,7 +76,7 @@ git push origin hexo # push到远端仓库的分支hexo
 ```
 push完成就可以在Travis的仓库页面查看执行日志了，等2分钟就会自动部署到master分支了
   
-# 采坑总结
+## 采坑总结
 
 我push了好多好多次，travis自动部署的文件总是为0kb的空文件，最后发现是因为主题没有上传导致（主题是直接用git clone下来的），删除主题里面的`.git`文件，再到主题的`.gitignore`文件中去掉`_config.xml`
 
