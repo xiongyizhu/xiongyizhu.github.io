@@ -1,20 +1,20 @@
 /* ---------------------------------
  *    Article Summary and Content
  * --------------------------------- */
-$article-font-size ?= 1.1rem
+$article-font-size ?= 16px
 
 article
     &.media
         .media-content
-            color: $text-light
+            /*color: $text-light*/
 
             .title
                 margin: 0
                 line-height: inherit
 
     &.article
-        .article-meta, .article-tags
-            color: $text-light
+        /*.article-meta, .article-tags
+            color: $text-light*/
 
         .article-meta
             overflow-x: auto
@@ -23,12 +23,20 @@ article
         .article-more
             @extend .button.is-light
 
+        .my-title
+            color: #4f4f4f
+            font-weight: 600
+            font-size: 1.75rem
         .content
             font-size: $article-font-size
+            
+            h1,h2,h3,h4,h5
+                color: #4f4f4f
 
             a
                 word-wrap: break-word
 
+            
             h1
                 font-size: 1.75em
 
@@ -46,6 +54,7 @@ article
 
             pre
                 font-size: .85em
+            
 
             code
                 padding: 0
