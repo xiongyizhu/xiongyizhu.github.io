@@ -34,7 +34,7 @@ class Footer extends Component {
                             
                             托管于<a href="https://github.com/xiongyizhu" target="_blank" rel="noopener">GitHub</a>&nbsp;|&nbsp;
                             {/* <a href="https://www.upyun.com/?utm_source=lianmeng&utm_medium=referral" target="_blank" rel="noopener">阿里云</a>提供CDN服务&nbsp;|&nbsp; */}
-                            <a href="https://beian.miit.gov.cn" target="_blank" rel="noopener">鄂ICP备20003465号-1</a>
+                            <a href="https://beian.miit.gov.cn" target="_blank" rel="noopener">鄂ICP备20003465号-1</a>&nbsp;
                             <br/>
 
                              <span dangerouslySetInnerHTML={{ __html: `&copy; ${siteYear} ${author || siteTitle}` }}></span>
